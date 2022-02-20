@@ -1,9 +1,9 @@
 import { FieldType } from "@/constants";
 import files from "./files";
 import xlsx from "node-xlsx";
-import dayjs from "dayjs";
 import fs from "fs";
 import path from "path";
+import dayjs from "dayjs";
 import { Mocker, AttributeType, Distribution, DataMode } from "random-mock";
 import { Attribute } from "random-mock/src/util/Attribute";
 
@@ -12,8 +12,10 @@ const mock = () => {
   files.forEach((file) => {
     const dataset = {} as any;
     const sheetname = file.sheetname;
+    const objectIndices = [] as number[];
     function cast_attributes(fields: any[]): Attribute[] {
-      return fields.map((field) => {
+      return fields.map((field, index) => {
+        if (field.type === FieldType.Object) objectIndices.push(index);
         return {
           name: field.name,
           type:
@@ -30,7 +32,10 @@ const mock = () => {
               : field.type === FieldType.Date
               ? new Distribution.Date.Uniform(field.range, "YYYY/MM/DD HH:mm")
               : field.type === FieldType.Object
-              ? new Distribution.Compound(cast_attributes(field.fields))
+              ? new Distribution.Compound({
+                  attributes: cast_attributes(field.fields),
+                  rules: [],
+                })
               : new Distribution.Discrete.Standard(field.range),
         };
       });
@@ -41,8 +46,13 @@ const mock = () => {
       rules: [],
     });
     const data = mocker.create({
-      count: 1e5,
+      count: 1e4,
       mode: DataMode.Table,
+    });
+    data?.forEach((value) => {
+      objectIndices.forEach((index) => {
+        value[index] = JSON.stringify(value[index]);
+      });
     });
     dataset.name = sheetname;
     dataset.data = data;

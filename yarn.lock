@@ -119,10 +119,10 @@
   "resolved" "https://registry.npmmirror.com/printj/-/printj-1.3.1.tgz"
   "version" "1.3.1"
 
-"random-mock@^0.1.0":
-  "integrity" "sha512-Zy7DN83EyKDFvgux7aBOps+FWFPYU7J7hDcUOKXqyoXM/WZLHniBgjbT6UXHv6HfRKEPn0HFBNQOIl17pzXN0A=="
-  "resolved" "https://registry.npmjs.org/random-mock/-/random-mock-0.1.4.tgz"
-  "version" "0.1.4"
+"random-mock@^0.1.6":
+  "integrity" "sha512-NX32D4GEWZKhCoXGikuYAkasS8VtMEAn4TnEhn+6hhMDOi2i+6id+Tp00YBUYEMbsFPKE5LEvPlK5cUKh2569g=="
+  "resolved" "https://registry.npmjs.org/random-mock/-/random-mock-0.1.7.tgz"
+  "version" "0.1.7"
   dependencies:
     "dayjs" "^1.10.7"
 
