@@ -1,2 +1,5 @@
 node_modules/
 dist/
+*.xlsx
+package-lock.json
+yarn.lock
