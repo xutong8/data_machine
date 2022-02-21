@@ -9,13 +9,11 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
+      "@/*": ["src/*"]
     },
     "plugins": [
       {
-        "transform": "@zerollup/ts-transform-paths",
+        "transform": "@zerollup/ts-transform-paths"
       }
     ]
   }
