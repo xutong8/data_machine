@@ -13,6 +13,7 @@ import sensor from './8sensor';
 const files = [
   example_0,
 /*  skip_1,
+  skip_1,
   skip_2,
   block,
   input,

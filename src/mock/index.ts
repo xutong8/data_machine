@@ -64,7 +64,7 @@ const mock = () => {
       rules: my_rules,
     });
     const data = mocker.create({
-      count: 10e4,
+      count: 1e4,
       mode: DataMode.Table,
       settings: {
         head: true,
