@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "ES5",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths"
+      }
+    ]
+  }
+}
