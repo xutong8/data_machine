@@ -3,7 +3,6 @@ import files from "./files";
 import xlsx from "node-xlsx";
 import fs from "fs";
 import path from "path";
-import dayjs from "dayjs";
 import { Mocker, AttributeType, Distribution, DataMode } from "random-mock";
 import { Attribute } from "random-mock/src/util/Attribute";
 
