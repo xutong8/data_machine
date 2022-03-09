@@ -1,3 +1,4 @@
+import example_0 from './0example';
 import skip_1 from './1_1skip';
 import skip_2 from './1_2skip';
 import block from './2block';
@@ -10,6 +11,8 @@ import binder from './7binder';
 import sensor from './8sensor';
 
 const files = [
+  example_0,
+/*  skip_1,
   skip_1,
   skip_2,
   block,
@@ -19,7 +22,7 @@ const files = [
   memory_leak,
   limit,
   binder,
-  sensor
+  sensor*/
 ];
 
 export default files;

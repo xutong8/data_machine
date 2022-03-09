@@ -18,7 +18,7 @@
   "dependencies": {
     "@zerollup/ts-transform-paths": "^1.7.18",
     "dayjs": "^1.10.7",
-    "random-mock": "^0.1.6",
+    "random-mock": "^0.1.7",
     "ttypescript": "^1.5.13"
   }
 }
