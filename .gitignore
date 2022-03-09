@@ -3,3 +3,5 @@ dist/
 src/data/
 package-lock.json
 yarn.lock
+.idea/
+
