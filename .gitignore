@@ -1,3 +1,5 @@
 node_modules/
 dist/
 src/data/
+package-lock.json
+yarn.lock
